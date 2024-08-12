@@ -10,11 +10,11 @@ Author URL: http://w3layouts.com
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Angel Homestay</title>
-    <!-- google-fonts -->
+    
     <link href="//fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
-    <!-- //google-fonts -->
-    <!-- Template CSS Style link -->
+    
     <link rel="stylesheet" href="assets/css/style-starter.css">
+    <link rel="stylesheet" href="emailFormField.css">
 </head>
 
 <body>
@@ -202,46 +202,6 @@ From the moment you step inside, you'll be embraced by the warmth of Angel Home 
                     </div>
                     
                 </div>
-                <!--
-                <div>
-                    <div class="flex-container2">
-                        <div class="column column3">
-                            <a href="assets/images/g1.jpg">
-                                <figure>
-                                    <img src="assets/images/g1.jpg"/>
-                                </figure>
-                            </a>
-
-                        </div>
-
-                        <div class="column column3">
-                            <a href="assets/images/g2.jpg">
-                                <figure>
-                                    <img src="assets/images/g2.jpg"/>
-                                </figure>
-                            </a>
-
-                        </div>
-
-                        <div class="column column3">
-                            <a href="assets/images/g3.jpg">
-                                <figure>
-                                    <img src="assets/images/g3.jpg"/>
-                                </figure>
-                            </a>
-
-                        </div>
-
-                        <div class="column column3">
-                            <a href="assets/images/g4.jpg">
-                                <figure>
-                                    <img src="assets/images/g4.jpg"/>
-                                </figure>
-                            </a>
-
-                        </div>
-                    </div>
-                -->
                 
                 <div class="col-4 gallery-img-grid gallery_grid1 hover14 column">
                     <div class="gallery_effect">
@@ -281,24 +241,6 @@ From the moment you step inside, you'll be embraced by the warmth of Angel Home 
                 </div>
                 </div>
                 
-                <!--div class="col-4 gallery-img-grid hover14 column">
-                    <div class="gallery_effect">
-                        <a href="assets/images/g5.jpg" class="js-img-viwer d-block">
-                            <figure>
-                                <img src="assets/images/g5.jpg" alt=" " class="img-fluid" />
-                            </figure>
-                        </a>
-                    </div>
-                </!--div>
-                <div class="col-4 gallery-img-grid hover14 column">
-                    <div class="gallery_effect">
-                        <a href="assets/images/g6.jpg" class="js-img-viwer d-block">
-                            <figure>
-                                <img src="assets/images/g6.jpg" alt=" " class="img-fluid" />
-                            </figure>
-                        </a>
-                    </div>
-                </div>-->
             </div>
         </div>
     </div>
@@ -315,71 +257,58 @@ From the moment you step inside, you'll be embraced by the warmth of Angel Home 
     <!-- //text content -->
 
     <!-- form section -->
-    <div class="main-w3 px-md-4 " id="newsletter">
-        <div class="container ">
-            <div class="w3l-forms-9 py-4 m-auto px-md-5 px-4" style="max-width:1000px">
-                <div class="container-fluid ">
-                    <div class="row align-items-center">
-                        <div class="main-midd col-xl-6 col-lg-5">
-                            <p  style="font-size: 20px;">Put your email address</p>
-                        </div>
-                        <div class="main-midd-2 col-xl-6 col-lg-7 mt-lg-0 ">
-                            <form id="emailform">
-                                <input type="email" id="email" placeholder="Enter your email" name="email" required/>
-                                <button type="submit">Submit</button>
-                            </form>
-                        </div>
+    
+    <div class="formBody">
+        <div class="form-container">
+            <form id="emailForm">
+                <div class="form-row">
+                    <div class="form-label">
+                        <label for="email" style="font-size: 16px;  color: #333; display: block;
+                        margin-bottom: 8px;">Enter your email for queries:</label> 
+                        
                     </div>
-                </div>
-            </div>
+    
+                    <div class="form-input">
+                        <input type="email" id="email" name="email" 
+                        required 
+                        style="width: 100%;
+                        padding: 10px;
+                        margin-bottom: 15px;
+                        border: 1px solid #cf794a;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        box-sizing: border-box;
+                        transition: border-color 0.3s ease-in-out ">
+    
+                        <button type="submit" style="
+                        width: 100%;
+                        padding: 10px;
+                        background-color: #ffa500;
+                        color: white;
+                        border: none;
+                        border-radius: 5px;
+                        font-size: 16px;
+                        cursor: pointer;
+                        transition: background-color 0.3s ease-in-out;">Submit</button>
+    
+                    </div>
+        
+                    </div>
+                
+            </form>
         </div>
+
     </div>
+    
+    
 
-    <script>
-        document.getElementById('emailForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get the email address entered by the user
-            var email = document.getElementById('email').value;
-
-            // Replace with your Google Form ID and field name
-            var googleFormId = '1FAIpQLSdQN7vgOjom4d_KnNw1zShLOSnuyMyXJwBbT3Yb2CE7CimA4Q';
-            var emailFieldName = 'entry.1196940652'; // Replace with your Google Form's field name
-
-            // Construct the Google Form submission URL
-            var submitURL = `https://docs.google.com/forms/d/e/${googleFormId}/formResponse`;
-            var formData = new FormData();
-            formData.append(emailFieldName, email);
-
-            // Send the form data to Google Form
-            fetch(submitURL, {
-                method: 'POST',
-                mode: 'no-cors',
-                body: formData
-            }).then(function() {
-                alert('Email submitted successfully!');
-            }).catch(function(error) {
-                alert('There was an error submitting your email.');
-            });
-        });
-    </script>
+   
     <!-- //form section -->
 
     <!-- footer -->
     
                     
-                    <!-- <div class="col-lg-3 footer-contact-list mt-lg-0 mt-md-5 mt-4 align-items-center">
-                        <h6 class="footer-title-29">Contact Info </h6>
-                        <ul class="align-items-center">
-                            <li class="d-flex align-items-center py-2"><i class="fa fa-map-marker mr-2"
-                                    aria-hidden="true"></i>Angel Homestay, Paravoor, Alappuzha, Kerala</li>
-                            <li class="d-flex align-items-center py-2"><i class="fa fa-phone mr-2"
-                                    aria-hidden="true"></i><a href="tel:+12 23456790">+91
-                                    8606606451</a></li>
-                            <li class="d-flex align-items-center py-2"><i class="fa fa-envelope mr-2"
-                                    aria-hidden="true"></i><a href="mailto:angelhomestayalpy4@gmail.co">angelhomestayalpy4@gmail.com</a></li>
-                        </ul>
-                    </div> -->
+                    
                     <div class="container21">
                         <ul class="centered-list">
                             <li class="  py-2"><i class="fa fa-map-marker mr-2"
@@ -473,6 +402,34 @@ From the moment you step inside, you'll be embraced by the warmth of Angel Home 
             // class of outer div
             // The second paramter is the speed between each letter is typed.   
             autoType(".type-js", 200);
+        });
+    </script>
+    <script>
+        
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            
+            var email = document.getElementById('email').value;
+
+            
+            var googleFormId = '1FAIpQLSdQN7vgOjom4d_KnNw1zShLOSnuyMyXJwBbT3Yb2CE7CimA4Q';
+            var emailFieldName = 'entry.1196940652'; 
+
+            var submitURL = `https://docs.google.com/forms/d/e/${googleFormId}/formResponse`;
+            var formData = new FormData();
+            formData.append(emailFieldName, email);
+
+           
+            fetch(submitURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).then(function() {
+                alert('Email submitted successfully!');
+            }).catch(function(error) {
+                alert('There was an error submitting your email.');
+            });
         });
     </script>
     
